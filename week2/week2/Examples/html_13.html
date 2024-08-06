@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Vector Images</title>
+	<meta charset=utf-8>
+</head>
+
+<body>
+	<h1>Vector Images</h1>
+	<h2>Using an object element</h2>
+	<object type=image/svg+xml data=red_square.svg>
+		Your browser does not support SVG
+	</object>
+	<p>Image created in Adobe Illustrator</p>
+	<h2>Using an img element</h2>
+	<!-- some functionality may be lost if you use an img element for svg graphics -->
+	<img src=red_square.svg alt="red square">
+	<p>Image created in Adobe Illustrator</p>
+	<h2>Using an svg element</h2>
+	<svg width="200" height="200">
+		<rect x=20 y=20 width=150 height=150 style="fill:rgb(255,0,0);stroke-width:2;stroke:rgb(0,0,0)" />
+	</svg>
+	<p>Image created using HTML code</p>
+</body>
+
+</html>
