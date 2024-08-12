@@ -18,6 +18,12 @@ header {
     width: 50px;
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .dropdown {
     padding: 5px;
     font-size: 14px;
@@ -27,18 +33,25 @@ header {
 .search-bar {
     padding: 5px;
     font-size: 14px;
+    margin-left: auto; 
 }
 
 main {
-    text-align: center;
     background-color: #FFF8E1;
     padding: 50px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-section {
+    display: flex;
+    align-items: center;
     max-width: 1000px;
-    margin: 0 auto;
-    position: relative;
+}
+
+.text-container {
+    flex: 1;
+    text-align: left;
 }
 
 .title {
@@ -53,10 +66,12 @@ main {
     margin: 0;
 }
 
-.hero-image {
-    width: 300px;
-    height: auto;
-    margin-top: 20px;
+.image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px; 
 }
 
 footer {
