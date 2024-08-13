@@ -1,13 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Ysabeau SC', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+h1 {
+    font-family: 'Permanent Marker', cursive;
+}
+h2 {
+    font-family: 'Poetsen One', sans-serif;
+    
+}
 header {
+    
     background-color: #004D40;
-    padding: 10px 20px;
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,28 +32,32 @@ header {
 }
 
 .dropdown {
+    float: right;
     padding: 5px;
     font-size: 14px;
-    margin-right: 10px;
+    margin-left: 30px;
 }
 
 .search-bar {
+    float: right;
     padding: 5px;
     font-size: 14px;
-    margin-left: auto; 
+    margin-left: 800px;
+    
 }
 
 main {
     background-color: #FFF8E1;
-    padding: 50px 20px;
+    padding: 0px 0px;
     display: flex;
     justify-content: center;
 }
 
 .hero-section {
     display: flex;
-    align-items: center;
+    align-items: left;
     max-width: 1000px;
+    
 }
 
 .text-container {
@@ -55,30 +66,34 @@ main {
 }
 
 .title {
-    font-size: 50px;
+    font-size: 60px;
     color: #FF7043;
     margin: 0;
+    align-items: right;
 }
 
 .subtitle {
-    font-size: 30px;
+    font-size: 50px;
     color: #00796B;
     margin: 0;
+    
+    
+    
 }
 
 .image {
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
-    margin-left: 20px; 
+    margin-left: 100px;  
 }
 
 footer {
     background-color: #FF7043;
-    padding: 20px;
+    padding: 35px;
     text-align: center;
-    color: white;
+    color: rgb(4, 4, 4);
     position: relative;
     bottom: 0;
     width: 100%;
@@ -86,4 +101,97 @@ footer {
 
 footer p {
     margin: 0;
+}
+body {
+    font-family: 'Ysabeau SC', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+h2 {
+    font-family: 'Poetsen One', sans-serif;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+main {
+    background-color: #FFF8E1;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro-section h1 {
+    font-family: 'Poetsen One', cursive;
+    font-size: 36px;
+    color: #333;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center
+    
+    
+    
+    
+}
+
+.intro-section p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #555;
+    max-width: 1200px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.content-section {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.content-image {
+    width: 50%;
+    max-width: 4000px;
+    margin-right: 20px;
+    padding: 10px 80px;
+}
+
+.pet-table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    border-top: 2px solid #000000; 
+    border-right: 2px solid #000000; 
+    border-bottom: 2px solid #000000; 
+    border-left: 2px solid #000000; 
+    background-color: white;
+    
+}
+
+.pet-table th, .pet-table td {
+    border: none;
+    padding-right: 50px;
+    text-align: left;
+}
+
+.pet-table th {
+    background-color: #ecf8bd;
+    padding-right: 100px;
+    font-family: 'Poetsen One', sans-serif;
+    color: #679167;
 }
