@@ -13,7 +13,7 @@ h2 {
 }
 header {
     
-    background-color: #004D40;
+    background-color: #008080;
     padding: 10px 30px;
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@ header {
 }
 
 main {
-    background-color: #FFF8E1;
+    background-color: #fcf9ec ;
     padding: 0px 0px;
     display: flex;
     justify-content: center;
@@ -67,14 +67,14 @@ main {
 
 .title {
     font-size: 60px;
-    color: #FF7043;
+    color: #E57F3D;
     margin: 0;
     align-items: right;
 }
 
 .subtitle {
     font-size: 50px;
-    color: #00796B;
+    color: #008080 ;
     margin: 0;
     
     
@@ -90,7 +90,7 @@ main {
 }
 
 footer {
-    background-color: #FF7043;
+    background-color: #E57F3D;
     padding: 35px;
     text-align: center;
     color: rgb(4, 4, 4);
