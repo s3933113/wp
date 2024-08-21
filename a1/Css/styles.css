@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 1200px;
 }
 h1 {
     font-family: 'Permanent Marker', cursive;
@@ -23,6 +24,7 @@ header {
 
 .logo {
     width: 50px;
+    
 }
 
 .header-container {
@@ -36,13 +38,16 @@ header {
     padding: 5px;
     font-size: 14px;
     margin-left: 30px;
+    max-width: 200px;
 }
 
 .search-bar {
     float: right;
     padding: 5px;
     font-size: 14px;
-    margin-left: 1500px;
+    margin-left: 1200px;
+    max-width: 150px;
+    margin-left: 650px;
     
 }
 
@@ -60,7 +65,7 @@ main {
 }
 
 .page3 {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
     background-color: white;
@@ -71,7 +76,7 @@ main {
 .hero-section {
     display: flex;
     align-items: left;
-    max-width: 1000px;
+    max-width: 1200px;
     
 }
 
@@ -81,37 +86,39 @@ main {
 }
 
 .title {
-    font-size: 60px;
+    font-size: 72px;
     color: #E57F3D;
-    margin: 0;
-    align-items: right;
+    margin-bottom: 20px;
+    
+    
 }
 
 .subtitle {
-    font-size: 50px;
+    font-size: 60px;
     color: #008080 ;
-    margin: 0;
-    
-    
-    
+    margin-bottom: 20;
+
 }
 
 .image {
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     object-fit: cover;
     margin-left: 100px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     background-color: #E57F3D;
-    padding: 35px;
+    padding: 35px 0px;
     text-align: center;
     color: rgb(4, 4, 4);
     position: relative;
     bottom: 0;
     width: 100%;
+    max-width: 1200px;
+    border-radius: 8px;
 }
 
 footer p {
@@ -181,9 +188,9 @@ main {
 
 .content-image {
     width: 50%;
-    max-width: 4000px;
+    max-width: 1200px;
     margin-right: 20px;
-    padding: 10px 80px;
+    padding: 50px 80px;
 }
 
 .pet-table {
@@ -202,13 +209,14 @@ main {
     border: none;
     padding-right: 50px;
     text-align: left;
+    
 }
 
 .pet-table th {
-    background-color: #ecf8bd;
+    background-color: #f5f5f5;
     padding-right: 100px;
-    font-family: 'Poetsen One', sans-serif;
-    color: #679167;
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #008080;
 }
 
 .pets-gallery {
@@ -224,6 +232,7 @@ main {
     overflow: hidden;
     text-align: center;
     padding: 20px;
+    
 }
 
 .pet-card img {
