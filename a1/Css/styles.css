@@ -33,6 +33,7 @@ header {
     
 }
 
+
 .header-container {
     display: flex;
     align-items: center;
@@ -82,7 +83,6 @@ header {
 
 .hero-section {
     display: flex;
-    align-items: left;
     max-width: 1200px;
     
 }
@@ -103,8 +103,7 @@ header {
 .subtitle {
     font-size: 60px;
     color: #008080 ;
-    margin-bottom: 20;
-
+    margin-bottom: 20px;
 }
 
 .image {
@@ -142,8 +141,13 @@ h1 {
     font-family: 'Permanent Marker', cursive;
 }
 
+.page3 h1 {  
+    font-family: 'Arial', sans-serif;
+}
+
+
 h2 {
-    font-family: 'Poetsen One', sans-serif;
+    font-family: 'Ysabeau SC', sans-serif;
 }
 
 .header-container {
@@ -169,20 +173,19 @@ main {
     display: flex;
     margin-top: 30px;
     justify-content: center;
-    align-items: center
-    
-    
-    
+    align-items: center;
     
 }
 
 .intro-section p {
+    font-family: 'Ysabeau SC', cursive;
     font-size: 18px;
     line-height: 1.4;
     color: #555;
     max-width: 1200px;
     margin: 10px auto;
     text-align: center;
+    padding-bottom: 30px;
 }
 
 .content-section {
@@ -209,6 +212,7 @@ main {
     border-bottom: 2px solid #000000; 
     border-left: 2px solid #000000; 
     background-color: white;
+    margin-bottom: 90px;
     
 }
 
@@ -235,7 +239,7 @@ main {
 .pet-card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(228, 225, 225, 0.1);
     overflow: hidden;
     text-align: center;
     padding: 20px;
@@ -259,9 +263,10 @@ main {
 
 
 p {
+    font-family: 'Ysabeau SC', cursive;
     text-align: center;
     font-size: 18px;
-    color: #000000;
+    color: #555;
     margin-bottom: 20px;
 }
 
@@ -364,7 +369,7 @@ small {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(238, 234, 234, 0.6); /* สีพื้นหลังของ overlay */
+    background-color: rgba(238, 234, 234, 0.6); 
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -373,6 +378,16 @@ small {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    
+}
+
+.searchicon {
+    display: block;
+    width: 1px;
+    height: 1px;
+    width: 10%;
+    
+   
 }
 
 .pet-card:hover .overlay {
