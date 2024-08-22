@@ -263,9 +263,9 @@ main {
 
 
 p {
-    font-family: 'Ysabeau SC', cursive;
+    font-family: 'Ysabeau SC', sans-serif;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     color: #555;
     margin-bottom: 20px;
 }
