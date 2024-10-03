@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Victoria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poetsen+One&family=Ysabeau+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <select class="dropdown">
+            <option>Select an Option...</option>
+            <option value="index.html">Home</option>
+            <option value="pets.html">Pets</option>
+            <option value="add.html">Add a pet</option>
+            <option value="gallery.html">Gallery</option>
+        </select>
+        <input type="text" placeholder="Search" class="search-bar">
+        <img src="images/searchicon.png" alt="icon" class="icon">
+    </div>
+</header>
+
+<main class="page2">
+    <section class="intro-section">
+        <h1>Discover Pets Victoria</h1>
+        <p>
+            Pets Victoria is a dedicated pet adoption organization based in Victoria, Australia, focused on providing a safe and loving environment for pets in need. With a compassionate approach, Pets Victoria works tirelessly to rescue, rehabilitate, and rehome dogs, cats, and other animals. Their mission is to connect these deserving pets with caring individuals and families, creating lifelong bonds. The organization offers a range of services, including adoption counseling, pet education, and community support programs, all aimed at promoting responsible pet ownership and reducing the number of homeless animals.
+        </p>
+    </section>
+
+    <div class="content-section">
+        
+        <img src="images/pets.jpeg" alt="Pets" class="content-image">
+        <table class="pet-table">
+            <tr>
+                <th>Pet</th>
+                <th>Type</th>
+                <th>Age</th>
+                <th>Location</th>
+            </tr>
+            <tr>
+                <td>Milo</td>
+                <td>Cat</td>
+                <td>3 months</td>
+                <td>Melbourne CBD</td>
+            </tr>
+            <tr>
+                <td>Baxter</td>
+                <td>Dog</td>
+                <td>5 months</td>
+                <td>Cape Woolamai</td>
+            </tr>
+            <tr>
+                <td>Luna</td>
+                <td>Cat</td>
+                <td>1 month</td>
+                <td>Ferntree Gully</td>
+            </tr>
+            <tr>
+                <td>Willow</td>
+                <td>Dog</td>
+                <td>48 months</td>
+                <td>Marysville</td>
+            </tr>
+            <tr>
+                <td>Oliver</td>
+                <td>Cat</td>
+                <td>12 months</td>
+                <td>Grampians</td>
+            </tr>
+            <tr>
+                <td>Bella</td>
+                <td>Dog</td>
+                <td>10 months</td>
+                <td>Carlton</td>
+            </tr>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; Copyright Alongkorn Sirimuntankul s3933113. All Rights Reserved | Designed for Pets Victoria</p>
+</footer>
+
+<script src="JavaScript/main.js"></script>
+</body>
+</html>

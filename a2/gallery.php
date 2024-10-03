@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Victoria</title>
+    <link rel="stylesheet" href="Css/styles.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <select class="dropdown">
+            <option>Select an Option...</option>
+            <option value="index.html">Home</option>
+            <option value="pets.html">Pets</option>
+            <option value="add.html">Add a pet</option>
+            <option value="gallery.html">Gallery</option>
+        </select>
+        <input type="text" placeholder="Search" class="search-bar">
+        <img src="images/searchicon.png" alt="icon" class="icon">
+    </div>
+</header>
+
+<main class="page2">
+    <section class="intro-section">
+        <h1>Pets Victoria has a lot to offer!</h1>
+        <p>For almost two decades, Pets Victoria has helped in creating true social change by bringing pet adoption into the mainstream. Our work has helped make a difference to the Victorian rescue community and thousands of pets in need of rescue and rehabilitation. But, until every pet is safe, respected, and loved, we all still have big, hairy work to do.</p>
+    </section>
+
+    <section class="pets-gallery">
+        <div class="pet-card">
+            <div class="pet-card-image">
+                <img src="images/cat1.jpeg" alt="Milo">
+                <div class="overlay">
+                    <span class="overlay"><u>DISCOVER MORE!</u></span>
+                </div>
+            </div>
+            <h3>Milo</h3>
+        </div>
+
+        <div class="pet-card">
+            <div class="pet-card-image">
+            <img src="images/dog1.jpeg" alt="Baxter">
+            <div class="overlay">
+                <span class="overlay"><u>DISCOVER MORE!</u></span>
+            </div>
+            </div>
+            <h3>Baxter</h3>
+        </div>
+        
+        <div class="pet-card">
+            <div class="pet-card-image">
+            <img src="images/cat2.jpeg" alt="Luna">
+            <div class="overlay">
+                <span class="overlay"><u>DISCOVER MORE!</u></span>
+            </div>
+            </div>
+            <h3>Luna</h3>
+        </div>
+
+        <div class="pet-card">
+            <div class="pet-card-image">
+            <img src="images/dog2.jpeg" alt="Willow">
+            <div class="overlay">
+                <span class="overlay"><u>DISCOVER MORE!</u></span>
+            </div>
+            </div>
+            <h3>Willow</h3>
+        </div>
+
+        <div class="pet-card">
+            <div class="pet-card-image">
+            <img src="images/cat3.jpeg" alt="Oliver">
+            <div class="overlay">
+                <span class="overlay"><u>DISCOVER MORE!</u></span>
+            </div>
+            </div>
+            <h3>Oliver</h3>
+        </div>
+
+        <div class="pet-card">
+            <div class="pet-card-image">
+            <img src="images/dog4.jpeg" alt="Bella">
+            <div class="overlay">
+                <span class="overlay"><u>DISCOVER MORE!</u> </span>
+            </div>
+            </div>
+            <h3>Bella</h3>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; COPYRIGHT ALONGKORN SIRIMUNTANAKUL S3933113. ALL RIGHT RESERVED | DESIGNED FOR PETS VICTORIA</p>
+</footer>
+
+<script src="JavaScript/main.js"></script>
+</body>
+</html>
