@@ -1,5 +1,44 @@
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding to prevent content from touching the edges */
+}
+
+.banner {
+    background-color: #E57F3D; /* Different color for banner */
+    height: 120px; /* Height for the banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Space between banner and header */
+}
+
+.banner-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    margin: 0;
+}
+.header-with-banner {
+    background-color: #008080;
+    padding: 10px 0;
+    position: relative;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    
+}
+
+
+
+
 body {
-    font-family: 'Ysabeau SC', sans-serif;
+    font-family: 'Ysabeau ', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,22 +63,21 @@ header {
 
 .logo {
     width: 60px;
-    
+    margin-left: 300px; /* Space between the logo and banner title */
 }
 
 .icon {
-    width: 50px;
-    margin-left: 10px;
-    
+    width: 30px;
+
 }
 
 
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
 }
-
 .dropdown {
     float: right;
     padding: 5px;
@@ -49,13 +87,15 @@ header {
 }
 
 .search-bar {
-    float: right;
     padding: 5px;
-    font-size: 14px;
-    margin-left: 1200px;
-    max-width: 150px;
-    margin-left: 650px;
-    
+    max-width: 130px;
+    margin-right: 10px; /* Space between the search bar and the icon */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search to the right side */
 }
 
 
@@ -83,10 +123,10 @@ header {
 
 .hero-section {
     display: flex;
-    max-width: 1200px;
-    
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
 }
-
 .text-container {
     flex: 1;
     text-align: left;
@@ -101,6 +141,7 @@ header {
 }
 
 .subtitle {
+    font-family: 'Ysabeau', sans-serif;
     font-size: 60px;
     color: #008080 ;
     margin-bottom: 20px;
@@ -143,6 +184,14 @@ h1 {
 
 .page3 h1 {  
     font-family: 'Arial', sans-serif;
+}
+
+
+.subtitle {
+    font-family: 'Ysabeau SC', sans-serif;
+    font-size: 40px;
+    color: #008080;
+    margin-bottom: 20px;
 }
 
 
@@ -399,3 +448,64 @@ small {
     font-size: 20px;
     font-family: 'Ysabeau SC', sans-serif;
 }
+.info-section {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.info-icon {
+    width: 32px; 
+    height: 32px; 
+    margin-bottom: 8px; 
+}
+
+.info-block span {
+    font-size: 14px; 
+}
+
+.pet-name {
+    
+    font-family: 'Ysabeau SC', sans-serif;
+    font-size: 2.5em;
+    color: #010101;
+    text-align: center; 
+    margin-top: 20px;
+}
+
+nav {
+    background-color: #008080;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: left; 
+    gap: 30px; 
+    padding: 0;
+}
+
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
