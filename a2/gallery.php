@@ -1,101 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pets Victoria</title>
-    <link rel="stylesheet" href="Css/styles.css">
-</head>
-<body>
+<?php include('includes/header.inc'); ?>
 
-<header>
-    <div class="header-container">
-        <img src="images/logo.png" alt="Logo" class="logo">
-        <select class="dropdown">
-            <option>Select an Option...</option>
-            <option value="index.html">Home</option>
-            <option value="pets.html">Pets</option>
-            <option value="add.html">Add a pet</option>
-            <option value="gallery.html">Gallery</option>
-        </select>
-        <input type="text" placeholder="Search" class="search-bar">
-        <img src="images/searchicon.png" alt="icon" class="icon">
-    </div>
-</header>
-
-<main class="page2">
-    <section class="intro-section">
-        <h1>Pets Victoria has a lot to offer!</h1>
-        <p>For almost two decades, Pets Victoria has helped in creating true social change by bringing pet adoption into the mainstream. Our work has helped make a difference to the Victorian rescue community and thousands of pets in need of rescue and rehabilitation. But, until every pet is safe, respected, and loved, we all still have big, hairy work to do.</p>
-    </section>
-
-    <section class="pets-gallery">
-        <div class="pet-card">
-            <div class="pet-card-image">
-                <img src="images/cat1.jpeg" alt="Milo">
-                <div class="overlay">
-                    <span class="overlay"><u>DISCOVER MORE!</u></span>
-                </div>
-            </div>
-            <h3>Milo</h3>
+<div class="wrapper">
+    <header class="header-with-banner">
+        <div class="logo-banner-container">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1 class="banner-title">PETS VICTORIA</h1> <!-- Main H1 for the page -->
         </div>
-
-        <div class="pet-card">
-            <div class="pet-card-image">
-            <img src="images/dog1.jpeg" alt="Baxter">
-            <div class="overlay">
-                <span class="overlay"><u>DISCOVER MORE!</u></span>
-            </div>
-            </div>
-            <h3>Baxter</h3>
+        <div class="search-container">
+            <input type="text" placeholder="Search" class="search-bar">
+            <img src="images/searchicon.png" alt="Search Icon" class="icon">
         </div>
-        
-        <div class="pet-card">
-            <div class="pet-card-image">
-            <img src="images/cat2.jpeg" alt="Luna">
-            <div class="overlay">
-                <span class="overlay"><u>DISCOVER MORE!</u></span>
-            </div>
-            </div>
-            <h3>Luna</h3>
-        </div>
+    </header>
 
-        <div class="pet-card">
-            <div class="pet-card-image">
-            <img src="images/dog2.jpeg" alt="Willow">
-            <div class="overlay">
-                <span class="overlay"><u>DISCOVER MORE!</u></span>
-            </div>
-            </div>
-            <h3>Willow</h3>
-        </div>
+    <?php include('includes/nav.inc'); ?>
 
-        <div class="pet-card">
-            <div class="pet-card-image">
-            <img src="images/cat3.jpeg" alt="Oliver">
-            <div class="overlay">
-                <span class="overlay"><u>DISCOVER MORE!</u></span>
-            </div>
-            </div>
-            <h3>Oliver</h3>
-        </div>
+    <main class="page2">
+        <section class="intro-section">
+            <h2>Pets Victoria has a lot to offer!</h2> <!-- Changed to H2 for subheading -->
+            <p>For almost two decades, Pets Victoria has helped in creating true social change by bringing pet adoption into the mainstream. Our work has helped make a difference to the Victorian rescue community and thousands of pets in need of rescue and rehabilitation. But, until every pet is safe, respected, and loved, we all still have big, hairy work to do.</p>
+        </section>
 
-        <div class="pet-card">
-            <div class="pet-card-image">
-            <img src="images/dog4.jpeg" alt="Bella">
-            <div class="overlay">
-                <span class="overlay"><u>DISCOVER MORE!</u> </span>
-            </div>
-            </div>
-            <h3>Bella</h3>
-        </div>
-    </section>
-</main>
+        <section class="pets-gallery">
+            <?php
+            // Connect to the database
+            include('includes/db_connect.inc');
 
-<footer>
-    <p>&copy; COPYRIGHT ALONGKORN SIRIMUNTANAKUL S3933113. ALL RIGHT RESERVED | DESIGNED FOR PETS VICTORIA</p>
-</footer>
+            // Retrieve all pets from the database
+            $result = $conn->query("SELECT petid, petname, image FROM pets");
 
-<script src="JavaScript/main.js"></script>
-</body>
-</html>
+            if ($result->num_rows > 0) {
+                // Loop through each pet and display it
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="pet-card">';
+                    echo '  <div class="pet-card-image">';
+                    echo '      <img src="images/' . $row["image"] . '" alt="' . $row["petname"] . '">';
+                    echo '      <div class="overlay">';
+                    echo '          <a href="details.php?id=' . urlencode($row['petid']) . '"><span>DISCOVER MORE!</span></a>';
+                    echo '      </div>';
+                    echo '  </div>';
+                    echo '  <h3>' . $row["petname"] . '</h3>';
+                    echo '</div>';
+                }
+            } else {
+                echo "<p>No pets found in the gallery.</p>";
+            }
+
+            $conn->close();
+            ?>
+        </section>
+    </main>
+</div>
+
+<?php include('includes/footer.inc'); ?>
