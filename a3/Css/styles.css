@@ -1,124 +1,23 @@
-.wrapper {
+/* Container and Layout */
+.wrapper, .page3, footer {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Add padding to prevent content from touching the edges */
+    padding: 0 20px;
 }
 
-.banner {
-    background-color: #E57F3D; /* Different color for banner */
-    height: 120px; /* Height for the banner */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px; /* Space between banner and header */
-}
-
-.banner-title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 36px;
-    color: white;
-    font-family: 'Permanent Marker', cursive;
-    margin: 0;
-}
-.header-with-banner {
-    background-color: #008080;
-    padding: 10px 0;
-    position: relative;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the content horizontally */
-    
-}
-
-
-
-
-body {
-    font-family: 'Ysabeau ', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    max-width: 1200px;
-}
-h1 {
-    font-family: 'Permanent Marker', cursive;
-}
-h2 {
-    font-family: 'Poetsen One', sans-serif;
-    
-}
-header {
-    
-    background-color: #008080;
-    padding: 10px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
-
-.logo {
-    width: 60px;
-    margin-left: 300px; /* Space between the logo and banner title */
-}
-
-.icon {
-    width: 30px;
-
-}
-
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-.dropdown {
-    float: right;
-    padding: 5px;
-    font-size: 14px;
-    margin-left: 30px;
-    max-width: 200px;
-}
-
-.search-bar {
-    padding: 5px;
-    max-width: 130px;
-    margin-right: 10px; /* Space between the search bar and the icon */
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    margin-left: auto; /* Push the search to the right side */
-}
-
+.wrapper { padding-top: 20px; }
 
 .main {
-    background-color: #fcf9ec ;
-    padding: 0px 0px;
-    display: flex;
-    justify-content: center;
-}
-.page2 {
-    background-color: #ffffff ;
-    padding: 0px 0px;
+    background-color: #fcf9ec;
     display: flex;
     justify-content: center;
 }
 
-.page3 {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 20px;
+.page2, .page3 {
     background-color: white;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-section {
@@ -127,385 +26,187 @@ header {
     align-items: center;
     margin: 40px 0;
 }
-.text-container {
-    flex: 1;
-    text-align: left;
-}
 
-.title {
-    font-size: 72px;
-    color: #E57F3D;
-    margin-bottom: 20px;
-    
-    
-}
-
-.subtitle {
-    font-family: 'Ysabeau', sans-serif;
-    font-size: 60px;
-    color: #008080 ;
-    margin-bottom: 20px;
-}
-
-.image {
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 100px;  
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-    background-color: #E57F3D;
-    padding: 35px 0px;
+.content-section, .intro-section, .info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: rgb(4, 4, 4);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    max-width: 1200px;
-    border-radius: 8px;
 }
 
-footer p {
-    margin: 0;
-}
-body {
+.info-section { margin-top: 20px; }
+
+/* Typography */
+body, p, .username, .intro-section h1, h1, h2 {
     font-family: 'Ysabeau SC', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1 {
+h1 { font-family: 'Permanent Marker', cursive; }
+
+.banner-title, .title {
     font-family: 'Permanent Marker', cursive;
+    font-size: 36px;
+    color: #E57F3D;
 }
 
-.page3 h1 {  
-    font-family: 'Arial', sans-serif;
-}
-
-
-.subtitle {
-    font-family: 'Ysabeau SC', sans-serif;
-    font-size: 40px;
+.subtitle, h2 {
+    font-size: 60px;
     color: #008080;
-    margin-bottom: 20px;
-}
-
-
-h2 {
     font-family: 'Ysabeau SC', sans-serif;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-
-main {
-    background-color: #FFF8E1;
-    padding: 50px 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 
 .intro-section h1 {
-    font-family: 'Poetsen One', cursive;
     font-size: 28px;
     color: #333;
     display: flex;
-    margin-top: 30px;
     justify-content: center;
     align-items: center;
-    
+    margin-top: 30px;
 }
 
-.intro-section p {
-    font-family: 'Ysabeau SC', cursive;
+.intro-section p, p {
     font-size: 18px;
     line-height: 1.4;
     color: #555;
-    max-width: 1200px;
-    margin: 10px auto;
     text-align: center;
-    padding-bottom: 30px;
-}
-
-.content-section {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.content-image {
-    width: 50%;
+    margin-bottom: 20px;
     max-width: 1200px;
-    margin-right: 20px;
-    padding: 50px 50px;
+}
+
+/* Header and Navigation */
+.header-with-banner {
+    background-color: #008080;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.main-nav {
+    background-color: #008080;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a, .user-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover { color: #E57F3D; text-decoration: underline; }
+
+/* User Profile in Navigation */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #E57F3D;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Search Bar */
+.search-bar, .input-container input[type="text"], .search-container input[type="text"] {
+    padding: 5px;
+    max-width: 200px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Buttons */
+.btn-submit, .btn-primary {
+    background-color: #008080;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-submit { border: none; }
+.btn-clear {
+    background-color: white;
+    color: #008080;
+    padding: 10px 30px;
+    border: 2px solid #008080;
+    border-radius: 15px;
+}
+
+/* Card & Table Layouts */
+.pet-card, .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+}
+
+.pet-card img, .content-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .pet-table {
     width: 100%;
     max-width: 1000px;
-    border-collapse: collapse;
-    border-top: 2px solid #000000; 
-    border-right: 2px solid #000000; 
-    border-bottom: 2px solid #000000; 
-    border-left: 2px solid #000000; 
     background-color: white;
     margin-bottom: 90px;
-    
 }
 
 .pet-table th, .pet-table td {
-    border: none;
-    padding-right: 50px;
+    padding: 10px;
     text-align: left;
-    
 }
 
 .pet-table th {
     background-color: #f8faee;
-    padding-right: 100px;
-    font-family: 'Ysabeau SC', sans-serif;
     color: #008080;
 }
 
-.pets-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
-}
-
-.pet-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(228, 225, 225, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    
-}
-
-.pet-card img {
-    width: 100%;
-    border-radius: 10px;
-    height: 250px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.pet-card h3 {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 20px;
+/* Footer */
+footer {
+    background-color: #E57F3D;
+    padding: 20px 0;
     color: #333;
-    margin: 0;
-}
-
-
-p {
-    font-family: 'Ysabeau SC', cursive;
     text-align: center;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 0.9em;
+    border-radius: 8px;
 }
-
-.form-group {
-    margin-bottom: 20px;
-}
-.small { 
-    color: red;
-    font-size: 12px;
-    margin-left: 150px;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    
-}
-
-.required {
-    color: red;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="file"],
-textarea,
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-textarea {
-    resize: vertical;
-}
-
-small {
-    font-size: 12px;
-    color: #999;
-}
-
-.form-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-left: 300px;
-}
-
-.btn-submit {
-    background-color: #008080; 
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-.btn-clear {
-    background-color: #ffffff;
-    color: #008080; 
-    padding: 10px 30px;
-    border: 2px solid #008080; 
-    border-radius: 15px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 300px;
-}
-.input-container {
-    display: flex;
-    flex-direction: column;
-}
-.pet-card {
-    position: relative;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-}
-
-.pet-card-image {
-    position: relative;
-}
-
-.pet-card img {
-    width: 100%;
-    border-radius: 10px;
-    height: 250px;
-    object-fit: cover;
-}
-
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(238, 234, 234, 0.6); 
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    
-}
-
-.searchicon {
-    display: block;
-    width: 1px;
-    height: 1px;
-    width: 10%;
-    
-   
-}
-
-.pet-card:hover .overlay {
-    height: 100%; 
-}
-
-.text {
-    color: rgb(23, 1, 1);
-    font-size: 20px;
-    font-family: 'Ysabeau SC', sans-serif;
-}
-.info-section {
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center;
-    margin-top: 20px;
-}
-
-.info-block {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-}
-
-.info-icon {
-    width: 32px; 
-    height: 32px; 
-    margin-bottom: 8px; 
-}
-
-.info-block span {
-    font-size: 14px; 
-}
-
-.pet-name {
-    
-    font-family: 'Ysabeau SC', sans-serif;
-    font-size: 2.5em;
-    color: #010101;
-    text-align: center; 
-    margin-top: 20px;
-}
-
-nav {
-    background-color: #008080;
-    padding: 10px 0;
-}
-
-.nav-links {
-    list-style-type: none;
-    display: flex;
-    justify-content: left; 
-    gap: 30px; 
-    padding: 0;
-}
-
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: 'Ysabeau SC', sans-serif;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
