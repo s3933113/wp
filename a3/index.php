@@ -2,6 +2,27 @@
 
 <?php include('includes/nav.inc'); ?>
 
+
+
+<?php if (isset($_SESSION['username'])): ?>
+    <div class="alert alert-success alert-dismissible fade show text-center mb-0" role="alert">
+        Login successful! Welcome, <?= htmlspecialchars($_SESSION['username']); ?>.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
+<?php if (isset($_GET['message']) && $_GET['message'] == 'login_error'): ?>
+    <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+        Incorrect username or password.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php elseif (isset($_GET['message']) && $_GET['message'] == 'logout_success'): ?>
+    <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+        Logout done!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
 <!-- Hero Section -->
 <main>
 <section class="hero-section py-5">
