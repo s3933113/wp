@@ -1,19 +1,25 @@
-<?php include('includes/header.inc'); ?>
-<main class="login-page">
-    <div class="login-container">
-        <h1>Login</h1>
-        <form action="login.php" method="POST">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required>
-            </div>
-            <button type="submit" name="login">Login</button>
-        </form>
-        <p><a href="register.php">Don't have an account? Register here</a></p>
+<?php
+$title = "Login";
+include('includes/header.inc');
+?>
+<h1><?= $title ?></h1>
+<?php
+include('includes/nav.inc');
+?>
+<form action="process_login.php" method="post">
+    <div class="mb-3 mt-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" id="username" class="form-control w-50">
     </div>
-</main>
-<?php include('includes/footer.inc'); ?>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" id="password" class="form-control w-50">
+    </div>
+    <div class="mb-3">
+        <input type="submit" value="Login" class="btn btn-primary">
+    </div>
+</form>
+</form>
+<?php
+include('includes/footer.inc');
+?>
