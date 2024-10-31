@@ -1,9 +1,16 @@
 <?php include('includes/header.inc'); ?>
 <?php include('includes/nav.inc'); ?>
 
+<?php if (isset($_GET['message']) && $_GET['message'] == 'add_success'): ?>
+    <div class="alert alert-primary alert-dismissible fade show text-center" role="alert">
+        Pet added successfully!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
 <main class="page2">
     <section class="intro-section text-center mt-5">
-        <h1 class="intro-title">Discover Pets Victoria</h1>
+        <h2 class="intro-title ">Discover Pets Victoria</h2>
         <p class="lead text-secondary">
             Pets Victoria is a dedicated pet adoption organization based in Victoria, Australia, focused on providing a safe and loving environment for pets in need. With a compassionate approach, Pets Victoria works tirelessly to rescue, rehabilitate, and rehome dogs, cats, and other animals. Their mission is to connect these deserving pets with caring individuals and families, creating lifelong bonds. The organization offers a range of services, including adoption counseling, pet education, and community support programs, all aimed at promoting responsible pet ownership and reducing the number of homeless animals.
         </p>

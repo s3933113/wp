@@ -21,6 +21,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 <?php endif; ?>
+<?php if (isset($_GET['message']) && $_GET['message'] == 'delete_success'): ?>
+    <div class="alert alert-dark alert-dismissible fade show text-center" role="alert">
+        Pet deleted successfully!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
+
 
 
 <!-- Hero Section -->
