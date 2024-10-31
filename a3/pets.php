@@ -38,7 +38,7 @@
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
                                     echo "<tr>";
-                                    echo "<td><a href='details.php?id=" . $row['petid'] . "'>" . $row['petname'] . "</a></td>";
+                                    echo "<td class='p-0'><a href='details.php?id=" . $row['petid'] . "' class='text-dark  ms-1'>" . $row['petname'] . "</a></td>";
                                     echo "<td>" . $row['type'] . "</td>";
                                     echo "<td>" . $row['age'] . " months</td>";
                                     echo "<td>" . $row['location'] . "</td>";
