@@ -1,46 +1,24 @@
 <?php include('includes/header.inc'); ?>
+<?php include('includes/nav.inc'); ?>
 
-<main class="register-page">
-    <div class="register-container">
-        <h1>Register</h1>
-        <form action="register.php" method="POST">
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" name="username" id="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" required>
-            </div>
-            <button type="submit" name="register">Register</button>
-        </form>
-        <p><a href="login.php">Already have an account? Login here</a></p>
+<section class="intro-section text-center mt-5">
+        <h1 class="intro-title ">Register</h1>
+        
+    </section>
+<form action="process_login.php" method="post">
+    <div class="mb-3 mt-3 ps-5">
+        <label for="username" class="form-label ">Username</label>
+        <input type="text" name="username" id="username" class="form-control w-50">
     </div>
-</main>
-
+    <div class="mb-3 ps-5">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" id="password" class="form-control w-50">
+    </div>
+    <div class="mb-3 ps-5">
+    <button class="btn btn-success custom-btn ">Sign up</button>
+    </div>
+</form>
+</form>
 <?php
-// Process registration form submission
-include('includes/db_connect.inc'); // Include database connection
-
-if (isset($_POST['register'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Hash the password for secure storage
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // Prepare and execute query to insert the new user
-    $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
-    $stmt->bind_param("ss", $username, $hashed_password);
-
-    // Check if registration is successful
-    if ($stmt->execute()) {
-        echo "<p>Registration successful! <a href='login.php'>Login here</a>.</p>";
-    } else {
-        echo "<p>Username already taken. Please choose another.</p>";
-    }
-    $stmt->close();
-}
-
-include('includes/footer.inc'); // Include footer for consistent layout
+include('includes/footer.inc');
 ?>
