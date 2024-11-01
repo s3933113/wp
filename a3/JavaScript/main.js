@@ -3,5 +3,7 @@ document.querySelector('.dropdown').addEventListener('change', function() {
     console.log("Selected option: " + selectedOption);
     if (selectedOption) {
         location.href = selectedOption;
+        
     }
 });
+

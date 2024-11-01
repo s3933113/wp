@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($stmt->execute()) {
         echo "New pet added successfully";
-        header("Location: pets.php");
+        header("Location: pets.php?message=add_success");
     } else {
         echo "Error: " . $stmt->error;
     }
