@@ -1,28 +1,40 @@
 <?php
 session_start();
+include('includes/db_connect.inc');
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
 
-// Simulated credentials for testing
-$correctUsername = "s3933113";
-$correctPassword = "Peter021040";
+    // Check if username exists
+    $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-// Retrieve form inputs
-$username = $_POST['username'];
-$password = $_POST['password'];
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
 
-// Check credentials
-if ($username === $correctUsername && $password === $correctPassword) {
-    $_SESSION['username'] = $username;
-    $_SESSION['alert_message'] = "Login successful!";
-$_SESSION['alert_type'] = "success"; // Use "danger" for errors, etc.
-header("Location: index.php?message=login_done");
-exit();
-    
-    
-    
-} else {
-    // Redirect to index with an error parameter for incorrect login
-    header("Location: index.php?message=login_error");
-    exit();
+        // Verify password
+        if (password_verify($password, $user['password'])) {
+            // Start user session and store user data
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['user_id'] = $user['id'];
+            header("Location: index.php?message=login_done");
+            exit();
+        } else {
+            // Incorrect password
+            header("Location: login.php?message=login_error");
+            exit();
+        }
+    } else {
+        // Username not found
+        header("Location: login.php?message=login_error");
+        exit();
+    }
+
+    $stmt->close();
 }
+
+$conn->close();
 ?>
